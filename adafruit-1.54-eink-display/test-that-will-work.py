@@ -53,7 +53,7 @@ display = Adafruit_IL0373(
 
 display.rotation = 0
 
-FILENAME = "blinka.bmp"
+FILENAME = "suze-152.bmp"
 
 
 def read_le(s):
