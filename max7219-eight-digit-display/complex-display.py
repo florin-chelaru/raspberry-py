@@ -6,6 +6,13 @@ from adafruit_max7219 import bcddigits
 from datetime import datetime
 import datetime as dt
 
+# wiring:
+# pi -> display:
+# 5V -> VCC
+# GND -> GND
+# MOSI -> DIN
+# SCLK -> CLK
+# CE0 -> CS
 spi = board.SPI()
 cs = digitalio.DigitalInOut(board.D4)
 
@@ -27,7 +34,7 @@ leds.brightness(3)
 # Countdown
 
 helper_date = dt.date(1, 1, 1)
-t = dt.time(0, 1, 0)  # 10 minutes
+t = dt.time(0, 1, 0)  # 1 minute
 time_str = t.strftime("%H.%M.%S.%f")
 print(time_str)
 leds.show_str(0, time_str)
